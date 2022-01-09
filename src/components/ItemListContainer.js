@@ -1,7 +1,10 @@
 import React from 'react';
+import ItemList from './ItemList';
+
+
 
 export function ItemListContainer(){
     return(
-        <h2>aca va el ItemListContainer</h2>
+        <ItemList/>
     )
 }

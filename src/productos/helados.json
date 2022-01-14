@@ -1,0 +1,51 @@
+[
+    {
+        "id": 1,
+        "nombre": "Addictive cream",
+        "ingredientes": "Oreo, Limón, Topping",
+        "descripcion":"Si te gusta esa combinacion de dulce y citrico este helado es para ti.",
+        "imagen": "../imagenes/addictive_cream.png",
+        "precio": 3000
+
+    },
+    {
+        "id": 2,
+        "nombre": "Kiwi sensation",
+        "ingredientes": "Kiwi, Pistacho, Topping",
+        "descripcion":"lorem lorem lorem",
+        "imagen": "../imagenes/kiwi_sensation.png",
+        "precio": 3000
+    },
+    {
+        "id": 3,
+        "nombre": "Mint Chocolate",
+        "ingredientes": "Menta, Chocolate, Topping",
+        "descripcion":"lorem lorem lorem",
+        "imagen": "../imagenes/mint_chocolate.png",
+        "precio": 3000
+    },
+    {
+        "id": 4,
+        "nombre": "Crazy banana",
+        "ingredientes": "Banana, Chirimoya, Topping",
+        "descripcion":"lorem lorem lorem",
+        "imagen": "../imagenes/crazy_banana.png",
+        "precio": 3000
+    },
+    {
+        "id": 5,
+        "nombre": "Strawberry passion",
+        "ingredientes": "Frutilla, Coco, Topping",
+        "descripcion":"lorem lorem lorem",
+        "imagen": "../imagenes/strawberry_passion.png",
+        "precio": 3000
+    },
+    {
+        "id": 6,
+        "nombre": "Fresh blueberry",
+        "ingredientes": "Arandano, Frambuesa, Topping",
+        "descripcion":"lorem lorem lorem",
+        "imagen": "../imagenes/fresh_blueberry.png",
+        "precio": 3000
+    }
+]

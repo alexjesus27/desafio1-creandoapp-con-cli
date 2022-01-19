@@ -1,6 +1,7 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
-function Item({nombre, imagen, ingrediente}) {
+function Item({id, nombre, imagen, ingrediente}) {
     
     return (
         <div className='card'>
@@ -10,7 +11,8 @@ function Item({nombre, imagen, ingrediente}) {
                 <p>
                     {ingrediente}
                 </p>
-                <a className='btn btn-primary'>Detalle</a>
+               
+                
             </div>
             
         </div>

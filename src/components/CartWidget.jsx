@@ -1,9 +1,12 @@
 import React from 'react';
 
-export function CartWidget(){
+export function CartWidget({contador}){
     return(
-        <i className='bi bi-cart'></i>
+        <div>
         
+        <i className='bi bi-cart '><spam className='badge badge-light'>{contador}</spam></i>
+        
+        </div>
     );
 }
 

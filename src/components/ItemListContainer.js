@@ -8,31 +8,25 @@ import productosHelados from '../productos/helados.json'
 
 
 export function ItemListContainer(){
-    const {category} = useParams();
+    const {catid} = useParams();
 
+const promesa = new Promise(resolve =>{
+    setTimeout(()=>{
+        resolve(productosHelados);
+    }, 2000);
+})
 
 async function cargarHelados(){
-
-    const promesa = new Promise(resolve =>{
-        setTimeout(()=>{
-            const categorias = productosHelados.filter((helados)=>{
-            
-                  if (category){
-                    return category === helados.catId;
-                }else {
-                    return true;
-               }
-            })
-       
-            resolve(categorias)
-
-    },2000)
-})
-    const helados = await promesa 
-
-    return helados 
+    const helados = await promesa;
+    const categorias = helados.filter((helados)=>{
+        if (catid){
+            return catid == helados.catId;
+         }else {
+           return true;
+        } 
+    })
+    return categorias
 }
-
 
 const [helados, setHelados] = useState(null)
 
@@ -49,5 +43,7 @@ const [helados, setHelados] = useState(null)
     }
     return(
         <ItemList helados={helados}/>
+        
     )
+
 }

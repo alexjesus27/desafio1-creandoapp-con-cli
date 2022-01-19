@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import {Link, NavLink} from 'react-router-dom';
 import {CartWidget} from './CartWidget';
 
 
@@ -18,21 +18,21 @@ const NavBar = (helado) => {
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <Link to={`/category/1`}>
+                    <NavLink to="/category/1">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Frutas del bosque</a>
+                        <a class="nav-link" aria-current="page" href="#">Frutas del bosque</a>
                     </li>
-                    </Link>
-                    <Link to={`/category/2`}>
+                    </NavLink>
+                    <NavLink to="/category/2">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Frutas tropicales</a>
+                        <a class="nav-link" aria-current="page" href="#">Frutas tropicales</a>
                     </li>
-                    </Link>
-                    <Link to={`/category/3`}>
+                    </NavLink>
+                    <NavLink to="/category/3">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">otros</a>
+                        <a class="nav-link" aria-current="page" href="#">otros</a>
                     </li>
-                    </Link>
+                    </NavLink>
                     <Link to="/cart">
                     <button className='btn btn-primary'>
                      <a>       

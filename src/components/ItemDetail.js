@@ -1,6 +1,12 @@
 import React from 'react';
+import { useState } from 'react';
+import {ItemCount} from './ItemCount';
 
 function ItemDetail({helados}){
+    
+   const [total, setTotal] = useState(0)
+
+
     return (
         <div className='card mb-3 mt-3 container' >
             <h3>Detalle del producto</h3>
@@ -15,7 +21,10 @@ function ItemDetail({helados}){
                         <p className='card-text'>{helados.descripcion}</p>
                         <p className='card-text'><small className='text-muted'>{helados.ingredientes}</small></p>
                         <p className='card-text'>$ {helados.precio}</p>
-                        <button className='btn btn-primary'>Agregar al carro</button>
+                        <ItemCount helados={helados} total={total} setTotal={setTotal}/>
+                        
+                             
+                        
                     </div>
                 </div>
             </div>

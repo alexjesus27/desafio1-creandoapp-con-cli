@@ -6,7 +6,8 @@
         "ingredientes": "Oreo, Limón, Topping",
         "descripcion":"Si te gusta esa combinacion de dulce y citrico este helado es para ti.",
         "imagen": "../imagenes/addictive_cream.png",
-        "precio": 3000
+        "precio": 3000,
+        "stock":50
 
     },
     {
@@ -16,7 +17,8 @@
         "ingredientes": "Kiwi, Pistacho, Topping",
         "descripcion":"lorem lorem lorem",
         "imagen": "../imagenes/kiwi_sensation.png",
-        "precio": 3000
+        "precio": 3000,
+        "stock":50
     },
     {
         "id": 3,
@@ -25,7 +27,8 @@
         "ingredientes": "Menta, Chocolate, Topping",
         "descripcion":"lorem lorem lorem",
         "imagen": "../imagenes/mint_chocolate.png",
-        "precio": 3000
+        "precio": 3000,
+        "stock":50
     },
     {
         "id": 4,
@@ -34,7 +37,8 @@
         "ingredientes": "Banana, Chirimoya, Topping",
         "descripcion":"lorem lorem lorem",
         "imagen": "../imagenes/crazy_banana.png",
-        "precio": 3000
+        "precio": 3000,
+        "stock":50
     },
     {
         "id": 5,
@@ -43,7 +47,8 @@
         "ingredientes": "Frutilla, Coco, Topping",
         "descripcion":"lorem lorem lorem",
         "imagen": "../imagenes/strawberry_passion.png",
-        "precio": 3000
+        "precio": 3000,
+        "stock":50
     },
     {
         "id": 6,
@@ -52,6 +57,8 @@
         "ingredientes": "Arandano, Frambuesa, Topping",
         "descripcion":"lorem lorem lorem",
         "imagen": "../imagenes/fresh_blueberry.png",
-        "precio": 3000
+        "precio": 3000,
+        "stock":50
+
     }
 ]

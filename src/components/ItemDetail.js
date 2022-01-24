@@ -1,10 +1,22 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useState } from 'react';
+import { CartContext } from '../contexts/CartContext';
 import {ItemCount} from './ItemCount';
 
 function ItemDetail({helados}){
+
     
+     
    const [total, setTotal] = useState(0)
+
+   const cartContext = useContext(CartContext);
+
+   //console.log(cartContext.carrito) 
+   //console.log(cartContext.addToCart);
+    const total2 = total
+    const onAdd = ()=>{
+        cartContext.addToCart(helados, total2)
+    }
 
 
     return (
@@ -21,7 +33,7 @@ function ItemDetail({helados}){
                         <p className='card-text'>{helados.descripcion}</p>
                         <p className='card-text'><small className='text-muted'>{helados.ingredientes}</small></p>
                         <p className='card-text'>$ {helados.precio}</p>
-                        <ItemCount helados={helados} total={total} setTotal={setTotal}/>
+                        <ItemCount helados={helados} total={total} setTotal={setTotal} onAdd={onAdd}/>
                         
                              
                         

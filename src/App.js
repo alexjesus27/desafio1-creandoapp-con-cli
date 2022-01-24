@@ -6,12 +6,13 @@ import HomePage from './pages/Home';
 import CartPage from './pages/Cart';
 import ProductDetail from './pages/ProductDetail';
 import CategoryPage from './pages/Category';
-import { ItemListContainer } from './components/ItemListContainer';
+import CartProvider from './contexts/CartContext';
 //import {ItemCount} from './components/ItemCount';
 
 
 function App() {
   return (
+    <CartProvider>
     <BrowserRouter>
       <div className="App">
         <NavBar/>
@@ -33,6 +34,7 @@ function App() {
        
       </div>
     </BrowserRouter>
+    </CartProvider>
   );
 }
 

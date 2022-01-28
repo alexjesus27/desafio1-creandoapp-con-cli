@@ -1,6 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { CartContext } from '../contexts/CartContext';
 
-export function CartWidget({contador}){
+
+
+export function CartWidget(){
+    const cartContext = useContext(CartContext);
+    const contador = cartContext.contadorProductos();
     return(
         <div>
         

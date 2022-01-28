@@ -36,7 +36,7 @@ const NavBar = (helado) => {
                     <Link to="/cart">
                     <button className='btn btn-primary'>
                      <a>       
-                    <CartWidget contador={4} />  
+                    <CartWidget/>  
                     </a>
                     </button>
                     </Link>

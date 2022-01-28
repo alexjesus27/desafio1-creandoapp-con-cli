@@ -3,7 +3,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './App.css';
 import NavBar from './components/NavBar';
 import HomePage from './pages/Home';
-import CartPage from './pages/Cart';
+import CartPage from './pages/CartPage';
 import ProductDetail from './pages/ProductDetail';
 import CategoryPage from './pages/Category';
 import CartProvider from './contexts/CartContext';

@@ -9,13 +9,6 @@ export function Cart() {
     const cartContext = useContext(CartContext);
     const {carrito} = cartContext;
     
-    const eliminar = ()=>{
-        
-        cartContext.removeItem()
-    }
-    
-    console.log(cartContext.TotalCompra());
-
     const clear = ()=>{
         cartContext.clear()
     }
@@ -39,24 +32,27 @@ export function Cart() {
             <h1>Sus Productos</h1>
             
             <div>
-                {carrito.map((helado)=>{
-                     return(
-                     <table className="table mt-4" key={helado.id}>
+                
+                     <table className="table mt-4" >
                                           <tbody>
-                                              <tr>
+                                          {carrito.map((helado)=>{
+                                            return(
+                                              <tr key={helado.id}>
                                                   <td><img src={`../public/${helado.imagen}`} className='img-fluid rounded-start' alt=''/></td>
                                                   <td>{helado.nombre}</td>
                                                   <td>cant. {helado.total2}</td>
                       	                        <td>$ {helado.precioTotal}</td>
-                      	                        <td><button className="btn btn-danger" onClick={eliminar}>X</button></td>
+                      	                        <td><button className="btn btn-danger" onClick={()=>{cartContext.removeItem(helado.id)}}>X</button></td>
+                                                
                                               </tr>
+                                              )})}
                                           </tbody>
                                       </table>
-                     )
+                     
 
-                }
+                
                     
-                )}
+                
             </div>
             <button className="btn btn-danger" onClick={clear}>Vaciar carrito</button>
             </div>

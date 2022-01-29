@@ -13,6 +13,7 @@ const CartProvider = (props) => {
         if(carrito.some(helado=> helado.id === helados.id)){
             let index = carrito.findIndex(helado => helado.id === helados.id );
             let producto = carrito[index];
+            console.log(producto)
             producto.total2 = producto.total2 + total2;
             producto.precioTotal = (producto.precioTotal + helados.precio * total2);
             const newHelado = [...carrito];
@@ -32,8 +33,8 @@ const CartProvider = (props) => {
     }
 
     const removeItem = (id) =>{
-        let index = carrito.findIndex(helado => helado.id === id);
-
+        let index = carrito.findIndex((helado)=> helado.id === id);
+        console.log(index)
         const newHelado = [...carrito];
         newHelado.splice(index, 1);
         setCarrito([...newHelado]);
@@ -50,7 +51,7 @@ const CartProvider = (props) => {
     }
     const contadorProductos =() =>{
         
-        return carrito.reduce((a,b)=> a+b.total2, 0)
+        return carrito.reduce((a,b)=> a + b.total2, 0)
     }
     
 

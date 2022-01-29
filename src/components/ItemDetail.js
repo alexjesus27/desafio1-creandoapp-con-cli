@@ -7,7 +7,7 @@ function ItemDetail({helados}){
 
     
      
-   const [total, setTotal] = useState(0)
+   const [total, setTotal] = useState(1)
 
    const cartContext = useContext(CartContext);
 

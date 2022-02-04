@@ -18,17 +18,17 @@ const NavBar = (helado) => {
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <NavLink to="/category/1">
+                    <NavLink to="/category/bosque">
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="#">Frutas del bosque</a>
                     </li>
                     </NavLink>
-                    <NavLink to="/category/2">
+                    <NavLink to="/category/tropical">
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="#">Frutas tropicales</a>
                     </li>
                     </NavLink>
-                    <NavLink to="/category/3">
+                    <NavLink to="/category/otros">
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="#">otros</a>
                     </li>

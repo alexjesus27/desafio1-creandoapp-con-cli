@@ -23,3 +23,5 @@ export function getFirestore() {
     return firestore(app);
     
 }
+
+export {firestore}

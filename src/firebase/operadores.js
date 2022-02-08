@@ -1,5 +1,5 @@
 import reactRouterDom from "react-router-dom";
-import { getFirestore } from "./conexion";
+import { getFirestore, firestore } from "./conexion";
 
 function documentoProductos(documento) {
     return{
@@ -44,4 +44,17 @@ export async function getProductoCategoryId(catId){
     const productos = snapshot.docs.map(documentoProductos)
 
     return productos
+}
+
+export async function crearOrden(orden){
+    const db = getFirestore()
+
+    const document = await db.collection('ordenes').add({
+        cliente: orden.cliente,
+        productos: orden.productos,
+        fechaPedido: firestore.Timestamp.fromDate(new Date()),
+        total: orden.total,
+    })
+
+    return document.id
 }

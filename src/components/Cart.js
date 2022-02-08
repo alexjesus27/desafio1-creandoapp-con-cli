@@ -2,12 +2,32 @@ import { useContext } from "react";
 import { Fragment } from "react";
 import { CartContext } from "../contexts/CartContext";
 import { Link } from "react-router-dom";
+import { useForm } from "react-hook-form";
+import { crearOrden } from "../firebase/operadores";
+import { TexField } from "./TextField";
 
 
 export function Cart() {
+
+    const form = useForm()
     
     const cartContext = useContext(CartContext);
     const {carrito} = cartContext;
+
+    async function onSubmit(formValues){
+        const nuevaOrden = {
+            cliente: formValues,
+            productos: carrito,
+            total: cartContext.TotalCompra(),
+        }
+
+        const nuevaOrdenId = await crearOrden(nuevaOrden)
+
+        alert(`Gracias por su compra. Nro Orden: ${nuevaOrdenId}`)
+
+        form.reset()
+        clear()
+    }
     
     const clear = ()=>{
         cartContext.clear()
@@ -59,7 +79,35 @@ export function Cart() {
             <div className="col-md-4">
                      <h3>Resumen de tu compra</h3>
                      <p>Total ${cartContext.TotalCompra()}</p>
-                     <button className="btn btn-primary">Finalizar compra</button>
+                     <h4>Complete con sus datos</h4>
+                     <form onSubmit={form.handleSubmit(onSubmit)}>
+                         <TexField
+                            title="Nombre"
+                            inputProps={{
+                                placeholder: 'Alexis Duran',
+                                required: true,
+                                ...form.register('name')
+                            }}
+                         />
+                         <TexField
+                            title="Correo"
+                            inputProps={{
+                                placeholder: 'alexis@ejemplo.com',
+                                required: true,
+                                ...form.register('email')
+                            }}
+                         />
+                         <TexField
+                            title="Telefono"
+                            inputProps={{
+                                placeholder: '569XXXXXXXX',
+                                required: true,
+                                ...form.register('phone'),
+                            }}
+                         />
+                        <button className="btn btn-primary">Finalizar compra</button>
+                     </form>
+                     
                      
                      
                      </div> 

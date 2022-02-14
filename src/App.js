@@ -7,6 +7,7 @@ import CartPage from './pages/CartPage';
 import ProductDetail from './pages/ProductDetail';
 import CategoryPage from './pages/Category';
 import CartProvider from './contexts/CartContext';
+
 //import {ItemCount} from './components/ItemCount';
 
 
@@ -31,6 +32,7 @@ function App() {
           </Route>
 
         </Switch>
+      
        
       </div>
     </BrowserRouter>

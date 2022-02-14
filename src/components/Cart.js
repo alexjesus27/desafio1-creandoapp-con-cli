@@ -105,7 +105,7 @@ export function Cart() {
                                 ...form.register('phone'),
                             }}
                          />
-                        <button className="btn btn-primary">Finalizar compra</button>
+                        <button className="btn btn-primary m-3">Finalizar compra</button>
                      </form>
                      
                      

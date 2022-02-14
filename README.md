@@ -15,7 +15,7 @@
 
 https://alexjesus27.github.io/desafio1-creandoapp-con-cli/
 
-- abrir http://localhost:3000
+
 
 ### Arquitectura
 

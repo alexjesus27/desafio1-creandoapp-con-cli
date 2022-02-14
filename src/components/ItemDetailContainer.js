@@ -1,8 +1,6 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 import ItemDetail from './ItemDetail';
-
-import productosHelados from '../productos/helados.json'
 import { getProductoId } from '../firebase/operadores';
 
 export function ItemDetailContainer({heladoId}) {

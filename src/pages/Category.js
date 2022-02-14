@@ -6,7 +6,7 @@ export default function CategoryPage(){
 
     const {catid} = useParams()
 
-    console.log(catid)
+    
    
     
     return <ItemListContainer catid = {{catid}}/>

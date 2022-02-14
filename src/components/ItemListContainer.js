@@ -1,10 +1,8 @@
 import React from 'react';
 import ItemList from './ItemList';
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
 import { getAllProducts, getProductoCategoryId } from '../firebase/operadores';
 
-import productosHelados from '../productos/helados.json'
 
 
 function cargarHelados(catid){

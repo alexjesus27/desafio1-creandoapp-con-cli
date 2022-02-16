@@ -11,12 +11,6 @@
   </a>
 
 
-### URL
-
-https://alexjesus27.github.io/desafio1-creandoapp-con-cli/
-
-
-
 ### Arquitectura
 
 - **Framework:** React.js
